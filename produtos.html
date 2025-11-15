@@ -3,15 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de produtos</title>
+    <title>Produtos - ShopAll</title>
+    <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="produtos.css">
 </head>
 <body>
-    
+    <header>
+        <h1>ShopAll</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a class="ativo" href="produtos.html">Produtos</a>
+            <a href="quemsomos.html">Quem Somos</a>
+            <a href="carrinho.html">Carrinho🛒</a>
+            <a href="perfil.html">Perfil👤</a>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <h2>Nossos Produtos</h2>
+        <p>Confira nossa seleção especial de produtos!</p>
+    </section>
+
     <main>
         <section class="featured-products">
-            <h1 class="section-title">Nossos produtos</h1>
-
             <div class="products-grid">
                 
                 <div class="product-item">
@@ -86,19 +100,17 @@
                     <button class="add-to-cart">Adicionar ao carrinho</button>
                 </div>
                 
-                <div class="product-item empty-slot"></div> 
+            </div>
 
+            <!-- Botão de Voltar ao Início -->
+            <div class="botao-inicio">
+                <a href="index.html">← Voltar ao Início</a>
             </div>
         </section>
     </main>
     
     <footer>
-        <div class="footer-links">
-            <a href="#">Contato</a>
-            <a href="#">Termos de serviço</a>
-            <a href="#">Políticas de privacidade</a>
-        </div>
-        <p class="copyright">&copy; 2025 Todos os direitos reservados.</p>
+        <p>&copy; 2025 ShopAll — Projeto desenvolvido por alunos de Computação</p>
     </footer>
 </body>
 </html>

@@ -1,16 +1,3 @@
-/* Banner */
-.banner {
-    background: linear-gradient(135deg, #004aad, #007bff);
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.banner h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
 .sobre h2, .equipe h2, .mvv h2 {
     color: #004aad;
     margin-bottom: 15px;
