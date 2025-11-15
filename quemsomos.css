@@ -1,0 +1,174 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #004aad;
+    color: white;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8em;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a:hover, nav a.ativo {
+    text-decoration: underline;
+}
+
+/* Banner */
+.banner {
+    background: linear-gradient(135deg, #004aad, #007bff);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.banner h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Conteúdo principal */
+main {
+    padding: 50px 10%;
+}
+
+.sobre h2, .equipe h2, .mvv h2 {
+    color: #004aad;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.sobre p, .equipe p, .mvv p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Foto da equipe */
+.foto-equipe {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.foto-equipe img {
+    width: 80%;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Lista de integrantes */
+.integrantes {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.integrantes h3 {
+    color: #004aad;
+    margin-bottom: 15px;
+}
+
+.integrantes ul {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+.integrantes li {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.integrantes .universidade {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #004aad;
+}
+
+/* Missão, Visão e Valores */
+.mvv {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.mvv-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.mvv-item {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.mvv-item h3 {
+    color: #004aad;
+    margin-bottom: 10px;
+}
+
+/* Botão de Voltar ao Início */
+.botao-inicio {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.botao-inicio a {
+    display: inline-block;
+    background-color: #004aad;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.botao-inicio a:hover {
+    background-color: #007bff;
+}
+
+/* Rodapé */
+footer {
+    background-color: #004aad;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
+.contato-footer {
+    margin-top: 10px;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.contato-footer p {
+    margin: 4px 0;
+}
