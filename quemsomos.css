@@ -15,20 +15,6 @@
   color: #333;
 }
 
-/* Foto da equipe */
-.foto-equipe {
-  text-align: center;
-  margin: 30px 0;
-}
-
-.foto-equipe img {
-  width: 80%;
-  max-width: 700px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Lista de integrantes */
 .integrantes {
   background-color: #f7f7f7;
   padding: 20px;
@@ -58,7 +44,7 @@
   color: #004aad;
 }
 
-/* Missão, Visão e Valores */
+
 .mvv {
   margin-top: 50px;
   text-align: center;

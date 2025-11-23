@@ -3,47 +3,53 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Cabeçalho */
 header {
-  background-color: #004aad;
+  background-color: #111;
   color: white;
   padding: 20px 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #333;
 }
 
 header h1 {
   font-size: 1.8em;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 nav a {
-  color: white;
+  color: #ccc;
   text-decoration: none;
   margin-left: 20px;
-  font-weight: bold;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
 nav a:hover,
 nav a.ativo {
+  color: white;
   text-decoration: underline;
 }
 
 /* Conteúdo principal */
 main {
   padding: 50px 10%;
+  min-height: 60vh;
 }
 
-/* Banner */
+/* Banner Genérico (usado em subpáginas) */
 .banner {
-  background: linear-gradient(135deg, #004aad, #007bff);
-  color: white;
+  background-color: #f4f4f4;
+  color: #111;
   text-align: center;
   padding: 60px 20px;
+  border-bottom: 1px solid #ddd;
 }
 
 .banner h2 {
@@ -59,97 +65,147 @@ main {
 
 .botao-inicio a {
   display: inline-block;
-  background-color: #004aad;
+  background-color: #111;
   color: white;
   text-decoration: none;
   padding: 12px 25px;
-  border-radius: 5px;
   font-weight: bold;
   transition: background-color 0.3s;
 }
 
 .botao-inicio a:hover {
-  background-color: #007bff;
+  background-color: #444;
 }
 
 /* Rodapé */
 footer {
-  background-color: #004aad;
-  color: white;
+  background-color: #111;
+  color: #888;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   margin-top: 50px;
   font-size: 0.9em;
+  border-top: 1px solid #333;
 }
 
-/* Estilos comuns de produtos */
+/* === ESTILOS UNIFICADOS DE PRODUTOS === */
+/* Isso garante que os cards sejam iguais na Home e na página Produtos */
+
 .products-grid {
   display: grid;
   gap: 30px;
+  /* As colunas são definidas nos CSS específicos (index ou produtos) */
 }
 
 .product-item {
-  display: flex;
+  background: white;
+  border: 1px solid #eee;
+  display: flex; /* Flexbox para alinhar conteúdo verticalmente */
   flex-direction: column;
   text-align: left;
+  padding-bottom: 15px;
+  transition: all 0.3s ease;
+  height: 100%; /* Ocupa toda a altura da linha do grid */
+  
+  /* CORREÇÃO IMPORTANTE: */
+  position: relative; /* Isso segura o badge "Mais Vendido" dentro do card */
 }
 
+.product-item:hover {
+  border-color: #111;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Container da Imagem Padronizado */
 .product-image {
-  background-color: #f5f5f5;
+  background-color: #fff;
+  height: 280px; /* Altura fixa para todas as áreas de imagem */
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   overflow: hidden;
-  border-radius: 10px;
+  margin-bottom: 15px;
+  position: relative;
 }
 
 .product-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transform: scale(1);
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain; /* Garante que a imagem não distorça */
   transition: transform 0.3s ease;
 }
 
 .product-image:hover img {
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
+
+/* Textos do Card */
+.product-name, 
+.product-description, 
+.product-price {
+  padding: 0 20px; /* Espaçamento lateral interno */
 }
 
 .product-name {
   font-size: 1.1em;
   font-weight: 600;
-  margin: 5px 0;
+  margin: 10px 0 5px 0;
+  color: #111;
+  min-height: 50px; /* Altura mínima para alinhar títulos de 2 linhas */
 }
 
 .product-description {
   font-size: 0.9em;
   color: #666;
   margin-bottom: 15px;
-  min-height: 40px;
+  flex-grow: 1; /* Empurra o preço e botão para baixo */
 }
 
 .product-price {
   font-size: 1.3em;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 15px;
-  color: #004aad;
+  color: #111;
 }
 
+/* Botão do Card */
 .add-to-cart {
-  background-color: #004aad;
+  background-color: #111;
   color: white;
-  border: none;
+  border: 1px solid #111;
   padding: 12px 20px;
   text-transform: uppercase;
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s;
-  width: 100%;
-  border-radius: 5px;
+  transition: all 0.3s;
+  width: calc(100% - 40px); /* Largura total menos o padding lateral */
+  margin: 0 auto 10px auto; /* Centralizado */
+  letter-spacing: 1px;
+
+  /* CORREÇÃO PARA LINKS FUNCIONAREM COMO BOTÕES */
+  display: block; 
+  text-align: center;
+  text-decoration: none;
 }
 
 .add-to-cart:hover {
-  background-color: #007bff;
+  background-color: white;
+  color: #111;
+}
+
+/* Badge "Mais Vendido" (usado na Home) */
+.product-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #111;
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.7em;
+  font-weight: bold;
+  text-transform: uppercase;
+  z-index: 10;
 }

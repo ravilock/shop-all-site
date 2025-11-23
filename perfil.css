@@ -1,0 +1,97 @@
+.perfil-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Coluna lateral menor, conteúdo maior */
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Cartão de Informações do Usuário */
+.user-card {
+  background: white;
+  padding: 20px;
+  border: 1px solid #eee;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.user-avatar {
+  width: 100px;
+  height: 100px;
+  background-color: #ddd;
+  border-radius: 50%;
+  margin: 0 auto 15px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  color: #555;
+}
+
+.user-card h3 {
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.user-card p {
+  color: #666;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+.btn-sair {
+  display: inline-block;
+  margin-top: 15px;
+  color: #d9534f; /* Vermelho */
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #d9534f;
+  padding: 8px 20px;
+  transition: all 0.3s;
+}
+
+.btn-sair:hover {
+  background-color: #d9534f;
+  color: white;
+}
+
+/* Área de Pedidos */
+.historico-pedidos h3 {
+  border-bottom: 2px solid #111;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.pedido-item {
+  background: white;
+  border: 1px solid #eee;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pedido-status {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status-entregue {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-caminho {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+@media (max-width: 768px) {
+  .perfil-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,17 +1,17 @@
 .carrinho h2 {
   text-align: center;
-  color: #004aad;
+  color: #111;
   margin-bottom: 30px;
   font-size: 2em;
 }
 
-/* Tabela */
+
 table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 30px;
   background-color: white;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
 }
 
 th,
@@ -22,76 +22,74 @@ td {
 }
 
 th {
-  background-color: #004aad;
+  background-color: #111; /* Preto */
   color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+}
+
+td {
+  text-align: left; 
+}
+
+
+td:not(:first-child) {
+    text-align: center;
 }
 
 tr:hover {
-  background-color: #f1f1f1;
+  background-color: #f9f9f9;
 }
 
 input[type="number"] {
   width: 60px;
-  padding: 5px;
+  padding: 8px;
   text-align: center;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 0;
 }
 
-/* Total e formulário */
 .total {
-  text-align: center;
-  font-size: 1.3em;
+  text-align: right;
+  font-size: 1.5em;
   margin-bottom: 20px;
-  color: #333;
+  color: #111;
+  border-top: 2px solid #111;
+  padding-top: 20px;
 }
 
 form {
-  text-align: center;
+  text-align: right;
   margin-bottom: 40px;
 }
 
 input[type="submit"] {
-  background-color: #004aad;
+  background-color: #111;
   color: white;
-  border: none;
-  padding: 12px 25px;
+  border: 2px solid #111;
+  padding: 15px 40px;
   font-size: 1em;
-  border-radius: 5px;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s;
+  text-transform: uppercase;
 }
 
 input[type="submit"]:hover {
-  background-color: #007bff;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  border-bottom: 1px solid #ddd;
-  text-align: left;
-  padding: 10px;
+  background-color: white;
+  color: #111;
 }
 
 .produto-info {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 .img-produto {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s;
-}
-
-.img-produto:hover {
-  transform: scale(1.1);
+  border: 1px solid #eee;
 }

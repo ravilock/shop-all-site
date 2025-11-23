@@ -1,0 +1,68 @@
+.checkout-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.checkout-section {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.checkout-section h3 {
+  color: #111;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 600;
+}
+
+.form-group input, 
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.resumo-pedido {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.btn-confirmar {
+  background-color: #28a745; /* Verde para sucesso */
+  color: white;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+
+.btn-confirmar:hover {
+  background-color: #218838;
+}
